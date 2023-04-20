@@ -1,9 +1,10 @@
 :root
 {
-    --blue: #1FA2F1;
+    --orange: #f29500;
     --blueLight: #9BD1F9;
+    --black: #000000;
     --blueBackground: rgba(212, 237, 255, 0.6);
-    --buttonHoverBg: #d4edff;
+    --buttonHoverBg: #51370b;
     --lightGrey: rgb(230, 236, 240);
     --spacing: 15px;
     --greyText: rgb(101, 119, 134);
@@ -21,7 +22,7 @@ html, body
 {
     height: 100%;
     min-height: 100%;
-    background-color: #FFF;
+    background-color: #f16400;
     font-weight: 300;
 }
 
@@ -58,9 +59,10 @@ h1
 nav
 {
 	display: flex;
-	flex-direction: column;
-	align-items: flex-end;
+	flex-direction: row;
+	align-items: flex-start;
 	height: 100%;
+    z-index: 1;
 }
 
 nav a
@@ -70,22 +72,41 @@ nav a
 	width: 55px;
 	height: 55px;
 	display: flex;
+    flex-wrap: wrap;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
     color: #212529;
     position: relative;
 }
 
 nav a.blue
 {
-    color: var(--blue);
+    color: var(--black);
 }
 
 nav a:hover
 {
     background-color: var(--buttonHoverBg);
-    color: var(--blue);
+    color: var(--orange);
     border-radius: 50%;
+}
+
+nav ul 
+{
+    display:inherit;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+nav ul li 
+{
+    display: inherit;
+    list-style-type: none;
+    flex: auto; /* shorthand for flex: 1 1 auto */
+    flex-wrap: wrap;
 }
 
 .wrapper
@@ -98,13 +119,14 @@ nav a:hover
 
 .wrapper > .row
 {
+    display:flex;
     margin: 0;
     height: 100%;
 }
 
 .mainSectionContainer
 {
-    padding:  0;
+    padding:  1;
     border-left: 1px solid var(--lightGrey);
     border-right: 1px solid var(--lightGrey);
     display: flex;
@@ -130,6 +152,8 @@ nav a:hover
 .postFormContainer
 {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: var(--spacing);
     border-bottom: 10px solid rgb(230, 236, 240);
     flex-shrink: 0; /* BUG FIX for Safari users */

@@ -1,5 +1,5 @@
 body {
-    background-color: #0099ff;
+    background-color: #ff9900;
 }
 
 .wrapper {
@@ -7,13 +7,17 @@ body {
     justify-content: center;
     margin-top: 20px;
 }
+a {
+    color:#ff9900;
+}
 
 .loginContainer {
     padding: 20px;
     width: 80%;
     max-width: 500px;
-    border: 1px solid #dedede;
-    background-color: #fff;
+    border: 1px solid #371c0781;
+    color: #ff9900;
+    background-color: #221e17;
     text-align: center;
     box-shadow: 0 1px 4px rgba(0,0,0,0.3);
     -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
@@ -36,7 +40,7 @@ input[type="password"] {
 }
 
 input[type="submit"] {
-    background-color: #0099ff;
+    background-color: #ff8800;
     color: #fff;
     border: none;
     border-radius: 2px;
