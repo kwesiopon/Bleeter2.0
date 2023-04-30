@@ -9,6 +9,7 @@ mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
 mongoose.set('useFindAndModify', false);
 mongoose.set('useUnifiedTopology', true);
+const uri ="mongodb+srv://aopon:Passwordagain@cluster0.eofiyx6.mongodb.net/?retryWrites=true&w=majority"
 
 class Database {
 
@@ -17,12 +18,12 @@ class Database {
     }
 
     connect() {
-        mongoose.connect("mongodb+srv://user:passsword@cluster0.eofiyx6.mongodb.net/?retryWrites=true&w=majority")
+        mongoose.connect(uri)
         .then(() => {
             console.log("database connection successful");
         })
         .catch((err) => {
-            console.log("database connection error " + err);
+            console.log("database connection error " + err.log);
         })
     }
 }
