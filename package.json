@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node --no-deprecation app.js",
     "start-deprecated": "node --no-deprecation app.js"
   },
@@ -19,5 +19,8 @@
     "mongoose": "^5.13.11",
     "multer": "^1.4.3",
     "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0"
   }
 }

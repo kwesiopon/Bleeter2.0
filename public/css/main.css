@@ -1,9 +1,9 @@
 :root
 {
     --orange: #f29500;
-    --blueLight: #9BD1F9;
+    --orangeLight: #c17c05;
     --black: #000000;
-    --blueBackground: rgba(212, 237, 255, 0.6);
+    --orangeBackground: rgba(212, 237, 255, 0.6);
     --buttonHoverBg: #51370b;
     --lightGrey: rgb(230, 236, 240);
     --spacing: 15px;
@@ -22,7 +22,7 @@ html, body
 {
     height: 100%;
     min-height: 100%;
-    background-color: #f16400;
+    background-color: #f29500;
     font-weight: 300;
 }
 
@@ -32,7 +32,6 @@ ul
     margin: 0;
 }
 
-/* Removes accessibility outline and prevents overriding (keyboard navigation) */
 *
 {
     outline: none !important;
@@ -60,9 +59,10 @@ nav
 {
 	display: flex;
 	flex-direction: row;
-	align-items: flex-start;
+	align-items: flex-end;
 	height: 100%;
     z-index: 1;
+    
 }
 
 nav a
@@ -76,10 +76,10 @@ nav a
 	align-items: center;
 	justify-content: space-around;
     color: #212529;
-    position: relative;
+    position: inherit;
 }
 
-nav a.blue
+nav a.goat
 {
     color: var(--black);
 }
@@ -96,9 +96,9 @@ nav ul
     display:inherit;
     margin: 0;
     padding: 0;
-    display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+  
 }
 
 nav ul li 
@@ -127,8 +127,8 @@ nav ul li
 .mainSectionContainer
 {
     padding:  1;
-    border-left: 1px solid var(--lightGrey);
-    border-right: 1px solid var(--lightGrey);
+    border-left: 1px solid var(--black);
+    border-right: 1px solid var(--black);
     display: flex;
     flex-direction: column;
 }
@@ -202,8 +202,8 @@ nav ul li
 
 #submitPostButton
 {
-    background-color: var(--blue);
-    color: #FFF;
+    background-color: var(--black);
+    color: var(--orange);
     border: none;
     border-radius: 40px;
     padding: 7px 15px;
@@ -211,7 +211,7 @@ nav ul li
 
 #submitPostButton:disabled 
 {
-    background-color: var(--blueLight);
+    background-color: var(--orangeLight);
 }
 
 /*  */
@@ -296,8 +296,8 @@ button span
 /* Post button container styling */
 .postButtonContainer button:hover 
 {
-    background-color: #D4EDFF;
-    color: var(--blue);
+    background-color: var(--orangeBackground);
+    color: var(--orange);
     border-radius: 50%;
 }
 
@@ -340,7 +340,7 @@ button span
 
 .replyFlag a
 {
-    color: var(--blue);
+    color: var(--orange);
     /* font-weight: bold; */
 }
 
@@ -383,7 +383,7 @@ button span
 .coverPhotoSection
 {
     height: 180px;
-    background-color: var(--blue);
+    background-color: var(--orange);
     position: relative;
 }
 /* Styles image hanging over contain 132/2= -66px */
@@ -415,8 +415,8 @@ button span
 .profileButton,
 .followButton 
 {
-    border: 1px solid var(--blue);
-    color: var(--blue);
+    border: 1px solid var(--orange);
+    color: var(--orange);
     font-weight: bold;
     padding: 5px 15px;
     border-radius: 60px;
@@ -427,12 +427,12 @@ button span
 .profileButton:hover,
 .followButton:hover 
 {
-    background-color: var(--blueBackground);
+    background-color: var(--orangeBackground);
 }
 
 .followButton.following
 {
-    background-color: var(--blue);
+    background-color: var(--orange);
     color: #FFF;
 }
 
@@ -484,14 +484,14 @@ button span
 
 .tab.active
 {
-    color: var(--blue);
-    border-bottom: 2px solid var(--blue);
+    color: var(--orange);
+    border-bottom: 2px solid var(--orangeLight);
 }
 
 .tab:hover
 {
-    color: var(--blue);
-    background-color: var(--blueBackground);
+    color: var(--orange);
+    background-color: var(--orangeBackground);
 }
 
 .noResults
@@ -568,7 +568,7 @@ button span
 
 .pinButton.active
 {
-    color: var(--blue);
+    color: var(--orange);
 }
 
 .pinnedPostText
@@ -715,7 +715,7 @@ button span
 
 .resultListItem.active
 {
-    background-color: var(--blueBackground);
+    background-color: var(--orangeBackground);
 }
 
 
@@ -733,7 +733,7 @@ button span
 /* Badge styling */
 #notificationsBadge
 {
-    background-color: var(--red);
+    background-color: var(--orange);
     height: 25px;
     width: 25px;
     border-radius: 50%;
@@ -760,10 +760,10 @@ button span
 #notificationList 
 {
     position: fixed;
-    top: 5px;
+    bottom: 5px;
     right: 5px;
     width: 350px;
-    background-color: white;
+    background-color: black;
     box-shadow: 0 1px 4px rgba(0,0,0,0.3);
     -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
@@ -771,5 +771,5 @@ button span
 
 #notificationList .active 
 {
-    background-color: white;
+    background-color: black;
 }

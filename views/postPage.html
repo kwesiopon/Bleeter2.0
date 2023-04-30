@@ -74,13 +74,19 @@
       }   
       }
     </script>
-    <div class="wrapper">
-    <div class="row">
-    <nav class="col-2"><a class="blue" href="/"><i class="fas fa-dove"></i></a><a href="/"><i class="fas fa-home"></i></a><a href="/notifications"><i class="fas fa-bell"></i><span id="notificationsBadge"></span></a><a href="/profile"><i class="fas fa-user"></i></a><a href="/logout"><i class="fas fa-sign-out-alt"></i></a></nav>
-    <div class="mainSectionContainer col-10 col-md-8 col-lg-6">
-      <div id="titleContainer">
-        <div class="headerButton"></div>
-      </div>
+    <section class="wrapper">
+      <div class="row">
+        <nav class="col-2" style="width: 100%; display: flex; flex-direction: row; ">
+          <a class="goat" href="/"><i class="fas fa-cow"></i></a>
+          <a href="/"><i class="fas fa-home"></i></a>
+          <a href="/notifications"><i class="fas fa-bell"></i><span id="notificationsBadge"></span></a>
+          <a href="/profile"><i class="fas fa-user"></i></a>
+          <a href="/logout"><i class="fas fa-sign-out-alt"></i></a>
+      </nav>
+      <div class="mainSectionContainer col-10 col-md-8 col-lg-6">
+        <div id="titleContainer">
+          <div class="headerButton"></div>
+        </div>
       <div class="content">
         <div id="postsContainer"></div>
         <!-- Reply Modal -->
@@ -132,7 +138,7 @@
         </div>
         <div style="display:none; visibility:hidden;" class="col-md-2 col-lg-4"></div>
       </div>
-    </div>
+    </section>
     <div id="notificationList"> </div>
     <script src="https://kit.fontawesome.com/85404227e2.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js" integrity="sha512-ooSWpxJsiXe6t4+PPjCgYmVfr1NS5QXJACcR/FPpsdm6kqG1FmQ2SVyg2RXeVuCRBLr0lWHnWJP6Zs1Efvxzww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
